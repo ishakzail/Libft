@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: izail <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 14:48:03 by izail             #+#    #+#             */
-/*   Updated: 2021/11/09 10:25:24 by izail            ###   ########.fr       */
+/*   Created: 2021/11/09 10:25:31 by izail             #+#    #+#             */
+/*   Updated: 2021/11/09 10:38:28 by izail            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
-
-void	ft_bzero(void *s, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*str;
-	size_t	i;
+	char	*p_char;
 
-	i = 0;
-	str = s;
-	if (n == 0)
-		return ;
-	while (i < n)
-		str[i++] = 0;
+	str = (char *) s;
+	if (!str)
+		return (0);
+	while (*str != '\0')
+	{
+		if (*str == c)
+			p_char = str;
+		str++;
+	}
+	return (p_char);
 }
