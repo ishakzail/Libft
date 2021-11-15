@@ -37,14 +37,3 @@ void ft_putnbr_fd(int n, int fd)
 
     
 }
-
-#include<stdio.h>
-#include<fcntl.h>
-int main()
-{
-	int fd = open("Files/text5.txt",O_CREAT | O_WRONLY, 0600);
-	if( fd < 0)
-		printf("File can't be readed and opened");
-	ft_putnbr_fd(000554,fd);
-	return (0);
-}

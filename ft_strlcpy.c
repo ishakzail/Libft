@@ -6,50 +6,29 @@
 /*   By: izail <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 11:25:53 by izail             #+#    #+#             */
-/*   Updated: 2021/11/09 12:24:17 by izail            ###   ########.fr       */
+/*   Updated: 2021/11/15 10:57:56 by izail            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stddef.h>
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	len;
+	unsigned int	i;
 
-	len = 0;
+	i = 0;
+	if (!dst || !src)
+		return (0);
 	if (dstsize > 0)
 	{
-		while (*(src + len) != '\0')
+		while (--dstsize && src[i])
 		{
-			if (len == dstsize)
-			{
-				len--;
-				break ;
-			}
-			*(dst + len) = *(src + len);
-			len++;
+			dst[i] = src[i];
+			i++;
 		}
+		dst[i] = '\0';
 	}
-	*(dst + len) = '\0';
-	while (*(src + len) != '\0')
-		len++;
-	return (len);
+	while (src[i])
+		i++;
+	return (i);
 }
-/*#include<stdio.h>
-void test(size_t size)
-{
-	char source[] = "Hello There, Venus";
-	char dest[19];
-	size_t r;
-
-	r = ft_strlcpy(dest,source,size);
-	printf("Copied '%s' into '%s' , Length : %zu\n", source, dest, r);
-}
-int main()
-{
-	test(29);
-	test(10);
-	test(0);
-
-	return (0);
-}*/

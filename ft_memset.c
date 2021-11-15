@@ -12,18 +12,17 @@
 
 #include <stddef.h>
 
-void	*ft_memset(void *str, int c, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*ptr;
+	size_t	cur;
+	char	*data;
 
-	ptr = str;
-	if (*ptr == 0)
-		return (0);
-	while (*ptr != '\0' && n > 0)
+	cur = 0;
+	data = (char *)b;
+	while (cur < len)
 	{
-		*ptr = c;
-		ptr++;
-		n--;
+		data[cur] = c;
+		cur++;
 	}
-	return (ptr);
+	return (b);
 }

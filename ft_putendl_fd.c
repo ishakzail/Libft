@@ -17,13 +17,3 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
-#include<stdio.h>
-#include<fcntl.h>
-int main()
-{
-	int fd = open("Files/text3.txt",O_CREAT | O_WRONLY, 0600);
-	if( fd < 0)
-		printf("File can't be readed and opened");
-	ft_putendl_fd("Ishak",fd);
-	return (0);
-}
