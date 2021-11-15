@@ -6,15 +6,17 @@
 /*   By: izail <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 10:58:58 by izail             #+#    #+#             */
-/*   Updated: 2021/11/09 11:25:18 by izail            ###   ########.fr       */
+/*   Updated: 2021/11/15 18:41:20 by izail            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
 	int			signe;
 	long long	nbr;
-	
+
 	signe = 1;
 	nbr = 0;
 	while (*str == ' ' || *str == '\n' || *str == '\t' || *str == '\r'

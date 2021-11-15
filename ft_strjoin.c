@@ -6,13 +6,13 @@
 /*   By: izail <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 10:38:59 by izail             #+#    #+#             */
-/*   Updated: 2021/11/11 14:13:29 by izail            ###   ########.fr       */
+/*   Updated: 2021/11/15 18:45:58 by izail            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(const char *s1,  const char *s2)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*str;
 	int		i;
@@ -37,4 +37,3 @@ char	*ft_strjoin(const char *s1,  const char *s2)
 	}
 	return (str);
 }
-

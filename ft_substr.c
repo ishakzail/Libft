@@ -6,13 +6,11 @@
 /*   By: izail <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 09:48:43 by izail             #+#    #+#             */
-/*   Updated: 2021/11/15 10:48:11 by izail            ###   ########.fr       */
+/*   Updated: 2021/11/15 18:47:23 by izail            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
 #include "libft.h"
-
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

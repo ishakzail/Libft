@@ -6,11 +6,11 @@
 /*   By: izail <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 12:24:53 by izail             #+#    #+#             */
-/*   Updated: 2021/11/09 15:20:27 by izail            ###   ########.fr       */
+/*   Updated: 2021/11/15 16:57:37 by izail            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

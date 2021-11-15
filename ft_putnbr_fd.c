@@ -6,34 +6,30 @@
 /*   By: izail <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 18:42:23 by izail             #+#    #+#             */
-/*   Updated: 2021/11/11 18:55:33 by izail            ###   ########.fr       */
+/*   Updated: 2021/11/15 18:40:02 by izail            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <unistd.h>
-
-void	ft_putchar(char c) {
+void	ft_putchar(char c)
+{
 	write(1, &c, 1);
 }
 
-
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-    	long long	nbr;
+	long long	nbr;
 
-        nbr = n;
-        if (nbr < 0)
-        {
-            nbr = (nbr * -1);
-            ft_putchar_fd('-',fd);
-        }
-        if (nbr >= 10)
-        {
-            ft_putnbr_fd((nbr / 10),fd);
+	nbr = n;
+	if (nbr < 0)
+	{
+		nbr = (nbr * (-1));
+		ft_putchar_fd('-', fd);
 	}
-	ft_putchar_fd(((nbr % 10) + '0'),fd);
-
-    
+	if (nbr >= 10)
+	{
+		ft_putnbr_fd((nbr / 10), fd);
+	}
+	ft_putchar_fd(((nbr % 10) + '0'), fd);
 }
