@@ -6,7 +6,7 @@
 /*   By: izail <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 14:24:29 by izail             #+#    #+#             */
-/*   Updated: 2021/11/15 19:01:26 by izail            ###   ########.fr       */
+/*   Updated: 2021/11/16 18:25:05 by izail            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	count_words(const char *str, char delimiter)
 	int	count;
 
 	count = 1;
-	if (strlen(str) == 0)
+	if (ft_strlen(str) == 0)
 		return (0);
 	while (*str != '\0')
 	{
