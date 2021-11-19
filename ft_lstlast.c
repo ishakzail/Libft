@@ -17,9 +17,9 @@ t_list	*ft_lstlast(t_list *lst)
     t_list  *last_elm;
     
     last_elm = lst;
-    if (last_elm == NULL)
+    if (!lst)
         return (NULL);
-    while (last_elm->next != NULL)
+    while (last_elm->next)
         last_elm = last_elm->next;
     return (last_elm);
 }

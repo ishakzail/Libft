@@ -6,7 +6,7 @@
 /*   By: izail <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 19:48:33 by izail             #+#    #+#             */
-/*   Updated: 2021/11/16 22:56:35 by izail            ###   ########.fr       */
+/*   Updated: 2021/11/18 19:13:24 by izail            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }
