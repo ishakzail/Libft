@@ -6,7 +6,7 @@
 /*   By: izail <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 19:48:17 by izail             #+#    #+#             */
-/*   Updated: 2021/11/16 23:05:27 by izail            ###   ########.fr       */
+/*   Updated: 2021/11/20 03:34:15 by izail            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-    t_list  *last_elm;
-    
-    last_elm = lst;
-    if (!lst)
-        return (NULL);
-    while (last_elm->next)
-        last_elm = last_elm->next;
-    return (last_elm);
+	t_list	*last_elm;
+
+	last_elm = lst;
+	if (!lst)
+		return (NULL);
+	while (last_elm->next)
+		last_elm = last_elm->next;
+	return (last_elm);
 }

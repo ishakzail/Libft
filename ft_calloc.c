@@ -6,7 +6,7 @@
 /*   By: izail <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 16:56:05 by izail             #+#    #+#             */
-/*   Updated: 2021/11/09 17:58:40 by izail            ###   ########.fr       */
+/*   Updated: 2021/11/18 19:11:55 by izail            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned int	i;
 
 	total = count * size;
-	p = malloc(total);
+	p = (char *)malloc(total * sizeof(char));
 	if (!p)
 		return (0);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: izail <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 19:22:31 by izail             #+#    #+#             */
-/*   Updated: 2021/11/16 20:55:59 by izail            ###   ########.fr       */
+/*   Updated: 2021/11/20 03:28:35 by izail            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	{
 		if (*lst)
 				new->next = *lst;
-			*lst = new; 
+		*lst = new;
 	}
 }

@@ -23,7 +23,7 @@ MANDATORY = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c ft_strle
 		ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_memcmp.c \
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c\
+		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c \
 		
 
 OBJS 	= $(MANDATORY:.c=.o)
@@ -32,11 +32,11 @@ OBJS_B 	= $(BONUS:.c=.o)
 %.o : %.c
 		$(CC) $(CFLAGS) -c $< -o $@ 
 
-$(NAME): $(OBJS) $(OBJS_B)
-	$(AR) $(NAME) $(OBJS) $(OBJS_B)
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS) 
 
-bonus: $(OBJS) $(OBJS_B)
-	$(AR) $(NAME) $(OBJS) $(OBJS_B) 
+bonus: $(OBJS_B)
+	$(AR) $(NAME) $(OBJS_B) 
 
 all: $(NAME)
 
