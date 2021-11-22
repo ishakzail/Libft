@@ -35,9 +35,6 @@ OBJS_B 	= $(BONUS:.c=.o)
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS) 
 
-bonus: $(OBJS_B)
-	$(AR) $(NAME) $(OBJS_B) 
-
 all: $(NAME)
 
 clean:
@@ -46,6 +43,9 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: clean all
+bonus: $(OBJS_B)
+	$(AR) $(NAME) $(OBJS_B) 
+
+re: fclean all
 
 .PHONY: bonus all clean fclean re

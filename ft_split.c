@@ -6,56 +6,70 @@
 /*   By: izail <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 14:24:29 by izail             #+#    #+#             */
-/*   Updated: 2021/11/16 18:25:05 by izail            ###   ########.fr       */
+/*   Updated: 2021/11/21 22:48:09 by izail            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_words(const char *str, char delimiter)
+static int		count_words(char const *s, char c)
 {
-	int	count;
+	int		count;
+	int		i;
 
-	count = 1;
-	if (ft_strlen(str) == 0)
-		return (0);
-	while (*str != '\0')
+	i = 0;
+	count = 0;
+	while (s[i])
 	{
-		if (*str == delimiter)
-		{
+		while (s[i] == c)
+			i++;
+		if (s[i] != c && s[i])
 			count++;
-			while (*str == delimiter)
-				str++;
-		}
-		str++;
+		while (s[i] != c && s[i])
+			i++;
 	}
 	return (count);
 }
 
+static char	*init_str(char const *s, char c)
+{
+	int		i;
+	char	*ptr;
+
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	if (!(ptr = (char *)malloc(sizeof(char) * (i + 1))))
+		return (NULL);
+	ft_strlcpy(ptr, s, i + 1);
+	return (ptr);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	char	**lst;
-	size_t	word_len;
 	int		i;
+	int		strs_len;
+	char	**ptr;
 
-	lst = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!s || !lst)
-		return (0);
-	i = 0;
-	while (*s)
+	if (!s)
+		return (NULL);
+	strs_len = count_words(s, c);
+	if (!(ptr = (char **)malloc(sizeof(char *) * (strs_len + 1))))
+		return (NULL);
+	i = -1;
+	while (++i < strs_len)
 	{
-		while (*s == (char )c && *s)
+		while (s[0] == c)
 			s++;
-		if (*s)
+		if (!(ptr[i] = init_str(s, c)))
 		{
-			if (!ft_strchr(s, c))
-				word_len = ft_strlen(s);
-			else
-				word_len = ft_strchr(s, c) - s;
-			lst[i++] = ft_substr(s, 0, word_len);
-			s += word_len;
+			while (i > 0)
+				free(ptr[i--]);
+			free(ptr);
+			return (NULL);
 		}
+		s = s + ft_strlen(ptr[i]);
 	}
-	lst[i] = NULL;
-	return (lst);
+	ptr[i] = 0;
+	return (ptr);
 }

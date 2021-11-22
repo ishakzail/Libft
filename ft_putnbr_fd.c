@@ -12,11 +12,6 @@
 
 #include "libft.h"
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 void	ft_putnbr_fd(int n, int fd)
 {
 	long long	nbr;
@@ -33,3 +28,14 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	ft_putchar_fd(((nbr % 10) + '0'), fd);
 }
+
+// #include<stdio.h>	
+// #include<fcntl.h>	
+// int main()	
+// {	
+// 	int fd = open("Files/text9.txt", O_RDWR , 0600);	
+// 	if( fd < 0)	
+// 		printf("File can't be readed and opened");	
+// 	ft_putnbr_fd(574,fd);	
+// 	return (0);	
+// }	

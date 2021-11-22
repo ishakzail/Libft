@@ -6,7 +6,7 @@
 /*   By: izail <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 11:17:04 by izail             #+#    #+#             */
-/*   Updated: 2021/11/08 11:54:59 by izail            ###   ########.fr       */
+/*   Updated: 2021/11/20 04:21:16 by izail            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const char	*p;
+	unsigned char	*p;
 
-	p = s;
+	p = (unsigned char *) s;
 	while (n--)
 	{
 		if (*p != (unsigned char)c)
@@ -24,5 +24,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		else
 			return ((void *)p);
 	}
-	return (0);
+	return (NULL);
 }

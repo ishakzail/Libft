@@ -35,6 +35,8 @@ char
 	size_t	start;
 	size_t	end;
 
+	if (!s1 || !set)
+		return (NULL);
 	s2 = (char *)s1;
 	start = 0;
 	while (s2[start] && ft_char_in_set(s2[start], set))
