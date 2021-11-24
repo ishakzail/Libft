@@ -6,12 +6,12 @@
 #    By: izail <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/09 18:35:00 by izail             #+#    #+#              #
-#    Updated: 2021/11/16 19:50:03 by izail            ###   ########.fr        #
+#    Updated: 2021/11/24 04:22:10 by izail            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
+HEADER = libft.h
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar -rcs
@@ -29,10 +29,10 @@ BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 OBJS 	= $(MANDATORY:.c=.o)
 OBJS_B 	= $(BONUS:.c=.o)
 
-%.o : %.c
+%.o : %.c 
 		$(CC) $(CFLAGS) -c $< -o $@ 
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(HEADER)
 	$(AR) $(NAME) $(OBJS) 
 
 all: $(NAME)
@@ -43,8 +43,8 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-bonus: $(OBJS_B)
-	$(AR) $(NAME) $(OBJS_B) 
+bonus: $(OBJS_B) $(OBJS) $(HEADER)
+	$(AR) $(NAME) $(OBJS_B) $(OBJS)
 
 re: fclean all
 
