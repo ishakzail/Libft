@@ -2,15 +2,6 @@
 
 ### :book: LIBFT-42 :
 
----
-
-<!-- </p>
-<p align="center">
-<img src="https://github.com/ishakzail/LIBFT-42/blob/main/ressources/libftm.png" width="150">
-</p> -->
-
----
-
 </p>
 <p align="center">
 <img src="https://www.iamsterdam.com/media/locations-ndtrc/museums/rijksmuseum-library-cc-bynd-20-hans-splinter-via-flickr.jpg?w=977" width="800">
@@ -18,24 +9,16 @@
 
 ---
 
----
 
 ### Subject :
 
 ---
 
-:book: [ENGLISH PDF](https://github.com/ishakzail/LIBFT-42/blob/main/en.subject.pdf)
+:book: [ENGLISH PDF](https://github.com/ishakzail/Libft/blob/main/en.subject.pdf)
 
 ---
 
 ### :information_source: What exactly is LIBFT ?
-
----
-
-<!-- </p>
-<p align="center">
-<img src="https://github.com/ishakzail/libft/blob/main/ressources/Libft.png" width="500">
-</p> -->
 
 ---
 
@@ -88,12 +71,6 @@ Part I :
 | • [atoi()](https://github.com/ishakzail/libft/blob/main/ft_atoi.c)       | NONE	   |  int	ft_atoi(const char *s)  |  | <stdlib.h> |
 
 ---
-
-</p>
-<p align="center">
-<img src="https://postcoitum429456745.files.wordpress.com/2018/10/mao_rtfm_vectorize_by_cmenghi.png" width="500">
-</p>
-
 
 > The legend says : "READ THE FUCKING MANUAL." X) !
 ---
